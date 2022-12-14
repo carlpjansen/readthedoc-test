@@ -40,7 +40,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Deploy"
-          git push
           
       - name: Force push to destination branch gh-pages
         run: |
