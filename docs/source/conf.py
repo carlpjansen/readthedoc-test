@@ -22,12 +22,12 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'autoapi.extension',
+    # 'autoapi.extension',
 #    'sphinxcontrib.apidoc',
 ]
 
-autoapi_type = 'python'
-autoapi_dirs = ['../../src']
+# autoapi_type = 'python'
+# autoapi_dirs = ['../../src']
 
 #apidoc_module_dir = '../../src'
 #apidoc_output_dir = '.'
@@ -51,7 +51,7 @@ epub_show_urls = 'footnote'
 
 html_context = {
     "display_github": True, # Integrate GitHub
-    "github_repo": "eeholmes/readthedoc-test", # Repo name
+    "github_repo": "carlpjansen/readthedoc-test", # Repo name
     "github_version": "main", # Version
     "conf_py_path": "docs/source/", # Path in the checkout to the docs root
 }
