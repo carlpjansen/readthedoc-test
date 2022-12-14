@@ -43,7 +43,7 @@ jobs:
           
       - name: Force push to destination branch gh-pages
         run: |
-          git remote add origin https://github.com/carlpjansen/readthedoc-test.git
+          git remote add kjell https://github.com/carlpjansen/readthedoc-test.git
           git push origin gh-pages --force
           
       # - name: Force push to destination branch
