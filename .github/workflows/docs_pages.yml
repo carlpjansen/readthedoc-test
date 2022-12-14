@@ -41,10 +41,21 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -m "Deploy"
           
-      - name: Force push to destination branch gh-pages
-        run: |
-          git remote add kjell https://github.com/carlpjansen/readthedoc-test.git
-          git push origin gh-pages --force
+          cd docs/build/html
+          touch .nojekyll
+          git init
+          cp ../../.git/config ./.git/config
+          git add .
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -a -m "Deploy"
+          git push -u origin +HEAD:gh-pages
+          
+          
+      # - name: Force push to destination branch gh-pages
+        # run: |
+          # git remote add kjell https://github.com/carlpjansen/readthedoc-test.git
+          # git push origin gh-pages --force
           
       # - name: Force push to destination branch
         # uses: ad-m/github-push-action@v0.5.0
